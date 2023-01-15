@@ -12,15 +12,15 @@
 const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText");
-const resetBtn = document.querySelector("#resetBtn");
+// const resetBtn = document.querySelector("#resetBtn"); No need for a restart button, start button is reset button
 const startBtn = document.querySelector("#startBtn");
 const gameWidth = gameBoard.width; // width for gameBoard
 const gameHeight = gameBoard.height; // height for gameBoard
 const boardBackground = "rgb(71, 71, 71)";  // color of board background
 const snakeColor = "red"; // color of the snake
-const snakeBorder = "white"; // black border around snake
+const snakeBorder = "rgb(44, 7, 7)"; // Dark-Red line around snakes body
 const foodColor = "rgb(0, 255, 0)"; // snakes food color 
-const unitSize = 25;  // game size i think
+const unitSize = 15;  // Size of the snake and food
 
 
 
@@ -39,9 +39,9 @@ let snake = [  // Snake positioning and x + y
     { x: unitSize, y: 0 },
     { x: 0, y: 0 }
 ]
-window.addEventListener("keydown", changeDirection); // i think detects when pressing arrow keys idk
-resetBtn.addEventListener("click", resetGame); // reset button stuf idk 
-startBtn.addEventListener("click", startGame); // start game button
+window.addEventListener("keydown", changeDirection); // I think detects when pressing arrow keys and changes direction according to keypress
+// resetBtn.addEventListener("click", resetGame); // Reset game button EDIT* Also i dont see the need for a reset button if the start button is basically a reset button
+startBtn.addEventListener("click", startGame); // Start game button
 main(); // Game dont start unless user presses button 
 
 
@@ -216,7 +216,7 @@ function displayGameOver() {
     ctx.fillText("GAME OVER! You Suck", gameWidth / 2, gameHeight / 2);
     running = false;
 };
-function resetGame() {
+/*function resetGame() {
     score = 0;
     xVelocity = unitSize;
     yVelocity = 0;
@@ -228,7 +228,7 @@ function resetGame() {
         { x: 0, y: 0 }
     ];
     gameStart();
-};
+};*/
 function startGame() {
     score = 0;
     xVelocity = unitSize;

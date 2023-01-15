@@ -4,17 +4,20 @@
 }
 #gameContainer{
     text-align: center;
+    padding-top: 20px;
 }
 #gameBoard{
-    border: 2px solid rgb(242, 255, 0);
+    border: 2px solid rgb(0, 255, 0);
 }
 
 #scoreText{
     font-family: sans-serif, cursive;
     font-size: 88px;  
-    color: rgb(0, 255, 17);  
+    color: rgb(0, 255, 17);
+    position: relative;
+    bottom: 10px;
 }
-#resetBtn{
+/*#resetBtn{                I dont see the need for a reset button if the start button is basically a reset button
     color: red;
     background-color: rgb(121, 210, 121);
     font-family: sans-serif;
@@ -26,7 +29,7 @@
     cursor: pointer;
     position: relative;
     left: 15%;
-}
+}*/
 #startBtn{
         color: red;
         background-color: rgb(121, 210, 121);
@@ -34,19 +37,19 @@
         font-size: 24px;
         height: 50px;
         width: 170px;
-        border: 3px red solid;
+        border: 2px red solid;
         border-radius: 25px;
         cursor: pointer;
         position: relative;
-        right: 15%;
+        bottom: 20px;
 }
-#resetBtn:hover{
+/*#resetBtn:hover{              I dont see the need for a reset button if the start button is basically a reset button
     color: rgb(253, 0, 0);
     background-color: rgb(0, 0, 255);
     transition: .5s;
-}
+}*/
 #startBtn:hover{
     color: rgb(253, 0, 0);
-    background-color: rgb(0, 0, 255);
-    transition: .5s;
+    background-color: rgb(32, 151, 75);
+    transition: .6s;
 }
